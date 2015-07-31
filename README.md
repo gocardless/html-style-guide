@@ -8,12 +8,12 @@ Have a look at how we write HTML at GoCardless - let us know if you've found the
 
 Good:
 ```html
-<div class=”much-class”>
+<div class="much-class">
 ```
 
 Not so good:
 ```html
-<div class=’very-attribute’>
+<div class='very-attribute'>
 ```
 
 ####b. Each indentation is two spaces long.
@@ -177,13 +177,13 @@ Might be OK:
 
 Might not be OK:
 ```html
-<custom-element class=”foo” custom-attribute=”value-for-custom-attr”>Bar</custom-element>
+<custom-element class="foo" custom-attribute="value-for-custom-attr">Bar</custom-element>
 ```
 
 Might be better:
 ```html
 <custom-element class="foo"
-custom-attribute=”value-for-custom-attr”>
+custom-attribute="value-for-custom-attr">
   Bar
 </custom-element>
 ```
