@@ -2,13 +2,20 @@
 
 ####a. We delimit attribute values using double-quotes.
 
-Good:         `<div class=”much-class”>`
-Not so good:  `<div class=’very-attribute’>`
+Good:
+```html
+<div class=”much-class”>
+```
+
+Not so good:
+```html
+<div class=’very-attribute’>
+```
 
 ####b. Each indentation is two spaces long.
 
 Good: 
-```
+```html
 <div class="parent">
 ··<div class="parent__child"></div>
 
@@ -19,7 +26,7 @@ Good:
 ```
 
 Not so good:
-```
+```html
 <div class="parent">
 ····<div class="parent__child"></div> <!-- Too much indentation -->
 
@@ -31,8 +38,15 @@ Not so good:
 
 ####c. We don’t include a forward-slash on void elements.
 
-Good:         `<br>`
-Not so good:  `<br/>`
+Good:         
+```html
+<br>
+```
+
+Not so good:
+```html
+<br/>
+```
 
 ###2. Structure
 
@@ -40,13 +54,20 @@ We strive for easy-to-parse, tidy code and have found a few rules pretty great f
 
 ####a. Some things can stay on one line.
 
-Good: `<div></div>`
-Also good: `<div>Can I live?</div>`
+Good: 
+```html
+<div></div>
+```
+
+Also good:
+```html
+<div>Can I live?</div>
+```
 
 Use judgement as to when it stops being readable, or is nearing your maximum line length.
 
 For example, this might be best:
-```
+```html
 <div>
 ··Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 </div>
@@ -55,60 +76,82 @@ For example, this might be best:
 ####b. Nesting elements means visual nesting too. 
 
 Good:
-```
+```html
 <div>
 ··<a>Foo</a>
 </div>
 ```
 
-####c. Add space between elements for clarity - it probably isn’t necessarily between parent & child elements or multiple one-line elements, but might be better between same-level multi-line elements (or multi-line blocks, such as a stack of one-line elements).
+####c. Add space between elements for clarity - it probably isn’t necessarily between parent & child elements or multiple one-line elements:
 
-Maybe:
-```
+eg
+```html
 <ul>
-··<li>1</li> <!-- No space between parent `ul` or child `li` -->
-··<li>2</li> <!-- No further nesting for such a small one-line element -->
-··<li>3</li>
-··<li>4</li>
+··<li>1</li> <!-- ^^^ No space between parent `ul` and child `li` -->
+··<li>2</li> <!-- ^^^ No space between multiple one-line elements -->
 </ul>
 ```
 
-Maybe:
-```
-<ul>
-··<li>
-····Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-··</li>
-  
-··<li> <!-- Space between same-level multi-line elements -->
-····Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-··</li>
-</ul>
-```
+The parent/child rule would apply to single multi-line elements too:
 
-Maybe:
-```
+eg
+```html
 <div>
-··<span>Foo</span>
-··<span>Bar</span>
-
-··<span>Foo</span> <!-- Space between multi-line blocks -->
-··<span>Bar</span>
-
-··<span> 
-····Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-··</span>
-  
-··<span>
+··<span><!-- ^^^ No space between parent `div` and child `span` -->
 ····Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 ··</span>
 </div>
 ```
 
-####d. Try using line-breaks for multiple attributes.
+But might be better between same-level multi-line elements:
+
+eg
+```html
+<ul>
+··<li>
+····Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+··</li>
+  
+··<li> <!-- ^^^ Space between same-level multi-line elements -->
+····Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+··</li>
+</ul>
+```
+
+Also between groups of one-line elements: 
+
+eg:
+```html
+<div>
+··<span>Foo</span>
+··<span>Bar</span>
+
+··<span>Foo</span> <!-- ^^^ Space between groups of one-line elements -->
+··<span>Bar</span>
+
+··<span><!-- ^^^ Space between groups of one-line elements -->
+····Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+··</span>
+</div>
+```
+
+And finally between any combinations of one-line or multi-line elements (so basically bear in mind spacing as soon as you introduce a multi-line element):
+
+eg:
+```html
+<div>
+··<span>Foo</span>
+
+··<span><!-- ^^^ Space between one-line and multi-line -->
+····Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+··</span>
+</div>
+```
+
+####d. Try using line-breaks for multiple attributes, keeping the first attribute on the tag's opening line.
 
 Good:
-```
+```html
 <div custom-attribute 
 class="something" 
 role="something-else"></div> 
@@ -124,13 +167,17 @@ role="something-else">
 ####e. Use your judgement on all the above for when things become less readable.
 
 Might be OK:
-`<input required custom-attribute>`
+```html
+<input required custom-attribute>
+```
 
 Might not be OK:
-`<custom-element class=”foo” custom-attribute=”value-for-custom-attr”>Bar</custom-element>`
-
-Isn’t this nicer?:
+```html
+<custom-element class=”foo” custom-attribute=”value-for-custom-attr”>Bar</custom-element>
 ```
+
+Might be better:
+```html
 <custom-element class="foo"
 custom-attribute=”value-for-custom-attr”>
   Bar
