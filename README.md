@@ -4,7 +4,7 @@ Have a look at how we write HTML at GoCardless - let us know if you've found the
 
 ###1. Basic formatting
 
-####a. We delimit attribute values using double-quotes.
+####a. We delimit attribute values using double-quotes
 
 Good:
 ```html
@@ -16,7 +16,7 @@ Not so good:
 <div class='very-attribute'>
 ```
 
-####b. Each indentation is two spaces long.
+####b. Each indentation is two spaces long
 
 Good: 
 ```html
@@ -40,7 +40,7 @@ Not so good:
 </div>
 ```
 
-####c. We don’t include a forward-slash on void elements.
+####c. We don’t include a forward-slash on void elements
 
 Good:         
 ```html
@@ -54,7 +54,7 @@ Not so good:
 
 ###2. Structure
 
-We strive for easy-to-parse, tidy code and have found a few rules pretty great for keeping things readable and neat:
+We strive for easy-to-parse, tidy code and have found a few rules pretty great for keeping things readable and neat
 
 ####a. Some things can stay on one line.
 
@@ -77,7 +77,7 @@ For example, this might be best:
 </div>
 ```
 
-####b. Nesting elements means visual nesting too. 
+####b. Nesting elements means visual nesting too 
 
 Good:
 ```html
@@ -101,7 +101,7 @@ The parent/child rule would apply to single multi-line elements too:
 eg
 ```html
 <div>
-··<span><!-- ^^^ No space between parent `div` and child `span` -->
+··<span> <!-- ^^^ No space between parent `div` and child `span` -->
 ····Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 ··</span>
 </div>
@@ -133,7 +133,7 @@ eg:
 ··<span>Foo</span> <!-- ^^^ Space between groups of one-line elements -->
 ··<span>Bar</span>
 
-··<span><!-- ^^^ Space between groups of one-line elements -->
+··<span> <!-- ^^^ Space between groups of one-line elements -->
 ····Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 ··</span>
 </div>
@@ -146,13 +146,13 @@ eg:
 <div>
 ··<span>Foo</span>
 
-··<span><!-- ^^^ Space between one-line and multi-line -->
+··<span> <!-- ^^^ Space between one-line and multi-line -->
 ····Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 ··</span>
 </div>
 ```
 
-####d. Try using line-breaks for multiple attributes, keeping the first attribute on the tag's opening line.
+####d. Try using line-breaks for multiple attributes, keeping the first attribute on the tag's opening line
 
 Good:
 ```html
@@ -168,7 +168,7 @@ role="something-else">
 </div> 
 ```
 
-####e. Use your judgement on all the above for when things become less readable.
+####e. Use your judgement on all the above for when things become less readable
 
 Might be OK:
 ```html
