@@ -86,7 +86,9 @@ Good:
 </div>
 ```
 
-####c. Add space between elements for clarity - it probably isn’t necessarily between parent & child elements or multiple one-line elements:
+####c. Add space between elements for readability
+
+It probably isn’t necessary between parent & child elements or multiple one-line elements:
 
 eg
 ```html
