@@ -56,7 +56,7 @@ Not so good:
 
 We strive for easy-to-parse, tidy code and have found a few rules pretty great for keeping things readable and neat
 
-####a. Some things can stay on one line.
+####a. Some things can stay on one line
 
 Good: 
 ```html
