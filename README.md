@@ -1,3 +1,7 @@
+## GoCardless HTML style guide
+
+Have a look at how we write HTML at GoCardless - let us know if you've found the same rules effective, if you've used others that are better, or if there's anything missing entirely which you think it's worth having a rule for!
+
 ###1. Basic formatting
 
 ####a. We delimit attribute values using double-quotes.
