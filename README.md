@@ -2,9 +2,9 @@
 
 Have a look at how we write HTML at GoCardless - let us know if you've found the same rules effective, if you've used others that are better, or if there's anything missing entirely which you think it's worth having a rule for!
 
-###1. Basic formatting
+### 1. Basic formatting
 
-####a. We delimit attribute values using double-quotes
+#### a. We delimit attribute values using double-quotes
 
 Good:
 ```html
@@ -16,7 +16,7 @@ Not so good:
 <div class='very-attribute'>
 ```
 
-####b. Each indentation is two spaces long
+#### b. Each indentation is two spaces long
 
 Good: 
 ```html
@@ -40,7 +40,7 @@ Not so good:
 </div>
 ```
 
-####c. We don’t include a forward-slash on void elements
+#### c. We don’t include a forward-slash on void elements
 
 Good:         
 ```html
@@ -52,11 +52,11 @@ Not so good:
 <br/>
 ```
 
-###2. Structure
+### 2. Structure
 
 We strive for easy-to-parse, tidy code and have found a few rules pretty great for keeping things readable and neat
 
-####a. Some things can stay on one line
+#### a. Some things can stay on one line
 
 Good: 
 ```html
@@ -77,7 +77,7 @@ For example, this might be best:
 </div>
 ```
 
-####b. Nesting elements means visual nesting too 
+#### b. Nesting elements means visual nesting too 
 
 Good:
 ```html
@@ -86,7 +86,7 @@ Good:
 </div>
 ```
 
-####c. Add space between elements for readability
+#### c. Add space between elements for readability
 
 It probably isn’t necessary between parent & child elements or multiple one-line elements:
 
@@ -154,7 +154,7 @@ eg:
 </div>
 ```
 
-####d. Try using line-breaks for multiple attributes, keeping the first attribute on the tag's opening line
+#### d. Try using line-breaks for multiple attributes, keeping the first attribute on the tag's opening line
 
 Good:
 ```html
@@ -170,7 +170,7 @@ role="something-else">
 </div> 
 ```
 
-####e. Use your judgement on all the above for when things become less readable
+#### e. Use your judgement on all the above for when things become less readable
 
 Might be OK:
 ```html
